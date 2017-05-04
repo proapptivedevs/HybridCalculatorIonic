@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ 'TITLE' | translate }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+  <ion-content class="calculator">
+    <div>
+        <label>
+            <input class="result" type="text" placeholder="{{ 'LABELPH' | translate }}" value="{{ result }}"/>
+        </label>
+    </div>
+    <div class="mainc">
+      <div class="row">
+        <div>
+              <button ion-button (click)="addToCalculation('7')">7</button>
+          </div>
+          <div>
+              <button ion-button (click)="addToCalculation('8')">8</button>
+          </div>
+          <div>
+              <button ion-button (click)="addToCalculation('9')">9</button>
+          </div>
+          <div>
+              <button ion-button color="light" (click)="calculate('/')">/</button>
+          </div>
+       
+      </div>
+      <div class="row">
+          <div>
+              <button ion-button (click)="addToCalculation('4')">4</button>
+          </div>
+          <div>
+              <button ion-button (click)="addToCalculation('5')">5</button>
+          </div>
+          <div>
+              <button ion-button (click)="addToCalculation('6')">6</button>
+          </div>
+          <div>
+              <button ion-button color="light" (click)="calculate('*')">X</button>
+          </div>
+      </div>
+      <div class="row">
+          <div>
+              <button ion-button (click)="addToCalculation('1')">1</button>
+          </div>
+          <div>
+              <button ion-button (click)="addToCalculation('2')">2</button>
+          </div>
+          <div>
+              <button ion-button (click)="addToCalculation('3')">3</button>
+          </div>
+          <div>
+              <button ion-button color="light" (click)="calculate('-')">-</button>
+          </div>
+      </div>
+      <div class="row">
+          <div>
+              <button ion-button color="light" ng-click="add(0)">0</button>
+          </div>
+          <div>
+              <button ion-button color="light" (click)="calculate('.')">.</button>
+          </div>
+          <div>
+              <button ion-button color="light" (click)="getTotal()">=</button>
+          </div>
+          <div>
+              <button ion-button color="light" (click)="calculate('+')">+</button>
+          </div>
+      </div>
+  </div>
+</ion-content>
